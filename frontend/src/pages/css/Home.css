@@ -1,0 +1,177 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #a57da2, #d099d8);
+  display: flex;
+  overflow: auto;
+}
+.screen{  
+  background: linear-gradient(135deg, #a57da2, #d099d8);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8e44ad;
+  letter-spacing: 1px;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 24px;
+  color: #6b0f8a;
+  margin-top: 80px;
+}
+
+button {
+  background-color: #6b0f8a;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #8e44ad;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E2C2E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 240px;
+  text-align: center;
+}
+
+.project-list {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.project-table-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-table th {
+  background-color: #6b0f8a;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.project-table td {
+  border: none;
+  padding: 15px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.project-table tr {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.project-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.create-newhomeproject-button {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 150px;
+  width: auto;
+  float: right; 
+  margin-right: 10px;
+  margin-top: -50px;
+}
+
+.create-newhomeproject-button:hover {
+  background-color: #0056b3;
+}

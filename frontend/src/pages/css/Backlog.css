@@ -1,0 +1,392 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #eaecf0, #e2ebf0);
+  display: flex;
+}
+
+.layout-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+  overflow: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+
+button {
+  background-color: #6b0f8a;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  outline: none;
+}
+.right-container {
+    background-color: rgb(248, 244, 249); 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    min-height: 100vh; 
+    overflow: auto;
+}
+button:hover {
+  background-color: #8e44ad;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+}
+
+.project-list {
+  margin-bottom: 20px;
+}
+
+.sprint-header, .backlog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sprint-header h3, .backlog-header h3 {
+  margin: 0;
+}
+
+.backlog-content,
+.sprint-content {
+  max-height: 600px;
+  background-color: #f3f3f3;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  overflow:scroll;
+}
+
+.create-issue {
+  margin-top: 10px;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.create-issue:hover {
+  text-decoration: underline;
+}
+
+.create-sprint {
+  font-size: 14px;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+.sprint-section,
+.backlog-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.backlog-header,
+.sprint-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.sprint-title {
+    font-weight: bold;
+}
+
+.start-sprint, .create-issue {
+    background: none;
+    border: none;
+    color: #0052cc;
+    cursor: pointer;
+}
+
+.backlog-content,
+.sprint-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sprint-plan-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sprint-plan-description {
+    text-align: center;
+    color: #6b778c;
+}
+
+.backlog-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.create-issue {
+    font-size: 1rem;
+    color: #0052cc;
+}
+
+.user-icon1 {
+  width: 50px;
+  height: 40px;
+  border-radius: 30%;
+  background-color: #e2c2e1;
+  color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: justify;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 4px;
+}
+
+.add-user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e2c2e1;
+  color: #7f2f9c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.backlog-search-container {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+  padding : 20px;
+}
+
+.backlog-search-input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #6b0f8a;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.backlog-search-input:focus {
+  border-color: #8e44ad;
+}
+
+.backlog-top{
+  width: auto;
+  margin: 20px auto;
+}
+
+.user-logo {
+  height: 24px;
+}
+
+.backlog-content {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.backlog-table {
+  width: 95%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.backlog-table th {
+  background-color: #6b0f8a;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.backlog-table td {
+  border: none;
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.backlog-table tr {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.backlog-table tr:last-child {
+  border-bottom: none;
+}
+
+.backlog-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+
+.sprint-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+
+.sprint-scrollable-section {
+  flex-grow: 1;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 16px;
+  background-color: #f0f3fb;
+}
+
+.sprint-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.start-sprint-btn {
+  padding: 6px 12px;
+  background-color: #6b0f8a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.start-sprint-btn:hover {
+  background-color: #550a6c;
+}
+
+.sprint-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  background-color: #e0e0e0;
+  border-top: 1px solid #ccc;
+}
+
+.no-items-message {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+
+.sprint-plan-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Styles for draggable items */
+.draggable {
+  cursor: grab;
+  user-select: none;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.draggable:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+}
+
+/* Styles for drop zones */
+.droppable {
+  min-height: 100px;
+  padding: 20px;
+  border: 2px dashed #6b0f8a;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.droppable.drag-over {
+  background-color: #e2c2e1;
+  border-color: #8e44ad;
+}
+
+.no-backlogs-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+  margin-top: 20px;
+}

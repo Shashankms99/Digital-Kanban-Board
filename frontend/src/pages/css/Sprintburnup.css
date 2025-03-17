@@ -1,0 +1,11 @@
+.scrollable-chart-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%;
+    max-height: 500px; /* Set max height to prevent vertical overflow */
+    padding: 10px;
+}
+
+.chart-wrapper {
+    width: 1500px; /* Set a fixed width to ensure the chart stretches */
+    height: 400px; /* Adjust as needed */
+}

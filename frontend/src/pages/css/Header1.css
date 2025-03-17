@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8e44ad;
+  letter-spacing: 1px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #8e44ad;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #6b0f8a;
+  color: #fff;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e2c2e1;
+  color: #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-icon:hover {
+  background-color: #d5a1c7;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 240px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  text-align: center;
+}
+
+.dropdown-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-large {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #6b0f8a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-header p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user-dropdown p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.dropdown-menu button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #6b0f8a;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
